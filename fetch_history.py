@@ -1,3 +1,4 @@
+"""
 Fetch 5 years of daily bars + dividend events for the sim-trader universe.
 Writes results to history.json in the repo root.
 
