@@ -16,6 +16,9 @@ Honesty notes:
   reject NaN as invalid JSON, and a "missing close" day is meaningless to the
   sim engine anyway — the trading-day calendar is derived from the union of
   bar dates across tickers, so a skipped row is the right semantics.
+- LSE pence-denominated tickers are normalised to pounds at write time. See
+  PENCE_TICKERS below — dividends are normalised too, otherwise a 5p payout
+  on Lloyds would land as £5 in the consumer's JSON.
 """
 
 import json
@@ -38,7 +41,7 @@ UNIVERSE = [
     "NFLX", "AMD", "PLTR", "COIN",
 
     # Popular ETFs (UK-listed where possible for ISA realism)
-    "VWRP.L",  # Vanguard FTSE All-World — our benchmark
+    "VWRP.L",  # Vanguard FTSE All-World ETF (current benchmark fallback)
     "VUSA.L",  # Vanguard S&P 500
     "VUKE.L",  # Vanguard FTSE 100
     "VAGP.L",  # Vanguard Global Aggregate Bond
@@ -53,7 +56,23 @@ UNIVERSE = [
     "^FTSE", "^GSPC", "^NDX", "^DJI", "^N225", "^FCHI",
     "GC=F",  # Gold futures (proxy for gold spot)
     "CL=F",  # Crude oil futures
+
+    # PROBE: FTSE All-World index (preferred benchmark per spec). If
+    # yfinance returns clean 5y data we'll switch BENCHMARK to this; if not,
+    # it'll land in 'errors' and we stick with VWRP.L.
+    "^FTAW",
 ]
+
+# Tickers whose prices and dividends yfinance returns in pence (GBX) rather
+# than pounds. Everything in this set has both prices AND dividends divided
+# by 100 before being written to JSON, so portfolio math comes out clean.
+# Match this list with PENCE_TICKERS in fetch_prices.py.
+PENCE_TICKERS = {
+    "LLOY.L", "SHEL.L", "AZN.L", "ULVR.L", "BARC.L", "GSK.L",
+    "HSBA.L", "BP.L", "RIO.L", "VOD.L", "TSCO.L", "DGE.L",
+    "NWG.L", "GLEN.L", "AAL.L",
+    "EQQQ.L",
+}
 
 
 def _safe_num(x):
@@ -68,6 +87,19 @@ def _safe_num(x):
     except (TypeError, ValueError):
         return None
     return f if f == f else None
+
+
+def _gbp_round(ticker, x, ndigits=4):
+    """Convert pence to pounds for pence-denominated tickers, then round.
+
+    Returns None if x is NaN/missing. For non-pence tickers, just rounds.
+    """
+    s = _safe_num(x)
+    if s is None:
+        return None
+    if ticker in PENCE_TICKERS:
+        s = s / 100
+    return round(s, ndigits)
 
 
 def fetch_one(ticker: str) -> dict:
@@ -87,16 +119,16 @@ def fetch_one(ticker: str) -> dict:
     # We only keep date + close — that's all the chart and engine actually
     # need. Open/high/low/volume removed to keep the file size manageable.
     # Skip any rows where close is NaN — invalid JSON if we emit it, and a
-    # missing close is meaningless for the sim anyway.
+    # missing close is meaningless for the sim anyway. Pence-denominated
+    # tickers get their close divided by 100 here.
     bars = []
     for idx, row in hist.iterrows():
-        close = _safe_num(row["Close"])
+        close = _gbp_round(ticker, row["Close"], 4)
         if close is None:
             continue
-        date_str = idx.date().isoformat()
         bars.append({
-            "date": date_str,
-            "close": round(close, 4),
+            "date": idx.date().isoformat(),
+            "close": close,
         })
 
     if not bars:
@@ -104,11 +136,16 @@ def fetch_one(ticker: str) -> dict:
 
     # Dividends: yfinance returns a pandas Series indexed by date, with the
     # dividend amount per share. Empty series for tickers that don't pay.
+    # Pence-denominated tickers also have their dividend amounts in pence
+    # (e.g. a 5p Lloyds dividend comes back as 5.0), so we apply the same
+    # divide-by-100 to keep the canonical-pounds invariant. 6 decimals
+    # because dividends are smaller numbers and rounding too aggressively
+    # would lose meaningful precision (e.g. 0.000123 GBP per share).
     dividends = []
     try:
         divs = t.dividends
         for idx, amount in divs.items():
-            div_amount = _safe_num(amount)
+            div_amount = _gbp_round(ticker, amount, 6)
             if div_amount is None:
                 continue
             div_date = idx.date().isoformat()
@@ -117,7 +154,7 @@ def fetch_one(ticker: str) -> dict:
             if bars[0]["date"] <= div_date <= bars[-1]["date"]:
                 dividends.append({
                     "date": div_date,
-                    "amount": round(div_amount, 6),
+                    "amount": div_amount,
                 })
     except Exception:
         # Some tickers (indices, futures) don't have dividends and yfinance
