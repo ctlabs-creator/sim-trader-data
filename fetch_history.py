@@ -7,9 +7,11 @@ each ticker gets a self-contained object with its bars and dividends.
 
 Honesty notes:
 - Uses unadjusted close (auto_adjust=False). Dividends are tracked separately
-- as cash events, the way they actually happen for a real holder.
+  as cash events, the way they actually happen for a real holder.
 - If a ticker can't be fetched, it goes in 'errors' rather than being faked.
 - Partial data beats no data: workflow only fails if literally everything errored.
+- We only store date + close for each bar. Spec is line charts only, no
+  candlesticks; OHLC + volume would roughly triple the file size for no benefit.
 """
 
 import json
@@ -61,22 +63,14 @@ def fetch_one(ticker: str) -> dict:
         raise ValueError(f"no daily history returned for {ticker}")
 
     # Build the bars list. Each row becomes a small dict, keyed by date.
+    # We only keep date + close — that's all the chart and engine actually
+    # need. Open/high/low/volume removed to keep the file size manageable.
     bars = []
     for idx, row in hist.iterrows():
         date_str = idx.date().isoformat()
-        # Volume can be NaN for some tickers (notably indices). Coerce to int
-        # where sensible, otherwise zero.
-        try:
-            volume = int(row["Volume"]) if row["Volume"] == row["Volume"] else 0
-        except (ValueError, TypeError):
-            volume = 0
         bars.append({
             "date": date_str,
-            "open": round(float(row["Open"]), 4),
-            "high": round(float(row["High"]), 4),
-            "low": round(float(row["Low"]), 4),
             "close": round(float(row["Close"]), 4),
-            "volume": volume,
         })
 
     # Dividends: yfinance returns a pandas Series indexed by date, with the
@@ -135,7 +129,9 @@ def main() -> int:
         "errors": errors,
     }
 
-    Path("history.json").write_text(json.dumps(output, indent=2))
+    # Compact JSON — no whitespace. The HTML doesn't care about readability,
+    # and this roughly halves the file size vs indent=2.
+    Path("history.json").write_text(json.dumps(output, separators=(",", ":")))
     print(f"\nWrote history.json: {len(history)} ok, {len(errors)} errors")
 
     if not history:
