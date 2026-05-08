@@ -7,7 +7,7 @@ each ticker gets a self-contained object with its bars and dividends.
 
 Honesty notes:
 - Uses unadjusted close (auto_adjust=False). Dividends are tracked separately
-  as cash events, the way they actually happen for a real holder.
+- as cash events, the way they actually happen for a real holder.
 - If a ticker can't be fetched, it goes in 'errors' rather than being faked.
 - Partial data beats no data: workflow only fails if literally everything errored.
 """
