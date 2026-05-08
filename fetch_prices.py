@@ -14,8 +14,8 @@ from pathlib import Path
 
 import yfinance as yf
 
-# Starting universe: 45 tickers covering the most likely things friends will
-# search for. Curated, not exhaustive. Easy to grow later by appending.
+# Starting universe: 45 + 1 (probe) tickers covering the most likely things
+# friends will search for. Curated, not exhaustive. Easy to grow by appending.
 UNIVERSE = [
     # UK large caps (FTSE 100 leaders)
     "LLOY.L", "SHEL.L", "AZN.L", "ULVR.L", "BARC.L", "GSK.L",
@@ -27,7 +27,7 @@ UNIVERSE = [
     "NFLX", "AMD", "PLTR", "COIN",
 
     # Popular ETFs (UK-listed where possible for ISA realism)
-    "VWRP.L",  # Vanguard FTSE All-World — our benchmark
+    "VWRP.L",  # Vanguard FTSE All-World ETF (current benchmark fallback)
     "VUSA.L",  # Vanguard S&P 500
     "VUKE.L",  # Vanguard FTSE 100
     "VAGP.L",  # Vanguard Global Aggregate Bond
@@ -42,7 +42,31 @@ UNIVERSE = [
     "^FTSE", "^GSPC", "^NDX", "^DJI", "^N225", "^FCHI",
     "GC=F",  # Gold futures (proxy for gold spot)
     "CL=F",  # Crude oil futures
+
+    # PROBE: FTSE All-World index (preferred benchmark per spec). If
+    # yfinance returns clean data we'll switch BENCHMARK to this; if not,
+    # it'll land in 'errors' and we stick with VWRP.L.
+    "^FTAW",
 ]
+
+# Tickers whose prices yfinance returns in pence (GBX) rather than pounds.
+# Everything in this set is divided by 100 before being written to JSON, so
+# downstream consumers see a single canonical unit (GBP) for every ticker
+# tagged 'GBP' in the engine. Without this, portfolio totals that mix UK
+# stocks with UK ETFs come out as nonsense — pence and pounds added together.
+#
+# yfinance is inconsistent across LSE listings:
+#   - Individual stocks (.L) → pence
+#   - Most Vanguard ETFs (VWRP, VUSA, VUKE, VAGP, VFEM, IGLN) → pounds
+#   - EQQQ.L → pence (the odd one out)
+# This list is hand-curated based on inspection of the live yfinance output
+# (LLOY 99.03 ≈ 99p, SHEL 3103 ≈ £31, EQQQ 52153 ≈ £521).
+PENCE_TICKERS = {
+    "LLOY.L", "SHEL.L", "AZN.L", "ULVR.L", "BARC.L", "GSK.L",
+    "HSBA.L", "BP.L", "RIO.L", "VOD.L", "TSCO.L", "DGE.L",
+    "NWG.L", "GLEN.L", "AAL.L",
+    "EQQQ.L",
+}
 
 
 def _safe_num(x):
@@ -59,10 +83,19 @@ def _safe_num(x):
     return f if f == f else None
 
 
-def _round_or_none(x, ndigits):
-    """Round x to ndigits, or return None if x is NaN/missing."""
+def _gbp_round(ticker, x, ndigits=4):
+    """Convert pence to pounds for pence-denominated tickers, then round.
+
+    Returns None if x is NaN/missing. For non-pence tickers, just rounds.
+    Used for every currency-bearing field (prices, opens, etc.) so the
+    consumer sees a single canonical unit per currency tag.
+    """
     s = _safe_num(x)
-    return round(s, ndigits) if s is not None else None
+    if s is None:
+        return None
+    if ticker in PENCE_TICKERS:
+        s = s / 100
+    return round(s, ndigits)
 
 
 def fetch_one(ticker: str) -> dict:
@@ -83,31 +116,37 @@ def fetch_one(ticker: str) -> dict:
 
     # Try to get a more recent intraday price. yfinance's "fast_info" sometimes
     # has it; fall back gracefully if it doesn't.
-    last_price = None
+    last_price_raw = None
     try:
         fast = t.fast_info
-        last_price = _safe_num(fast["last_price"])
+        last_price_raw = _safe_num(fast["last_price"])
     except Exception:
         pass
 
     # Fall back to the daily close if fast_info didn't yield a usable number.
-    if last_price is None:
-        last_price = _safe_num(last_row["Close"])
+    if last_price_raw is None:
+        last_price_raw = _safe_num(last_row["Close"])
 
     # If we still don't have a price, refuse — fills must have a real number
     # to honour. Better to put this ticker in 'errors' than emit NaN that
     # breaks the JSON or, worse, fills at NaN.
-    if last_price is None:
+    if last_price_raw is None:
         raise ValueError(f"no usable last_price for {ticker}")
+
+    # Apply pence-to-pounds normalisation if applicable.
+    if ticker in PENCE_TICKERS:
+        last_price = last_price_raw / 100
+    else:
+        last_price = last_price_raw
 
     return {
         "ticker": ticker,
         "last_price": round(last_price, 4),
         "last_date": last_date,
-        "open": _round_or_none(last_row["Open"], 4),
-        "high": _round_or_none(last_row["High"], 4),
-        "low": _round_or_none(last_row["Low"], 4),
-        "close": _round_or_none(last_row["Close"], 4),
+        "open":  _gbp_round(ticker, last_row["Open"]),
+        "high":  _gbp_round(ticker, last_row["High"]),
+        "low":   _gbp_round(ticker, last_row["Low"]),
+        "close": _gbp_round(ticker, last_row["Close"]),
         "volume": int(last_row["Volume"]) if last_row["Volume"] == last_row["Volume"] else 0,
     }
 
