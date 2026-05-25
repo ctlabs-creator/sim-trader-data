@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-05-25T16:09:10.126843+00:00",
+  "fetched_at": "2026-05-25T20:51:22.211874+00:00",
   "universe_size": 46,
   "ok_count": 45,
   "error_count": 1,
@@ -442,7 +442,7 @@
       "high": 4582.6001,
       "low": 4531.2998,
       "close": 4523.2002,
-      "volume": 59323
+      "volume": 63705
     },
     "CL=F": {
       "ticker": "CL=F",
@@ -450,9 +450,9 @@
       "last_date": "2026-05-25",
       "open": 93.88,
       "high": 93.9,
-      "low": 90.32,
+      "low": 89.41,
       "close": 96.6,
-      "volume": 97779
+      "volume": 112313
     }
   },
   "errors": {
