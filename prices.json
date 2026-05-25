@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-05-23T06:46:10.201169+00:00",
+  "fetched_at": "2026-05-25T16:09:10.126843+00:00",
   "universe_size": 46,
   "ok_count": 45,
   "error_count": 1,
@@ -416,43 +416,43 @@
     },
     "^N225": {
       "ticker": "^N225",
-      "last_price": 63339.0703,
-      "last_date": "2026-05-22",
-      "open": 61913.3594,
-      "high": 63432.4102,
-      "low": 61842.5586,
-      "close": 63339.0703,
-      "volume": 158800000
+      "last_price": 65158.19,
+      "last_date": "2026-05-25",
+      "open": 63658.9492,
+      "high": 65408.8711,
+      "low": 63562.5117,
+      "close": null,
+      "volume": 0
     },
     "^FCHI": {
       "ticker": "^FCHI",
-      "last_price": 8115.75,
-      "last_date": "2026-05-22",
-      "open": 8138.9702,
-      "high": 8158.79,
-      "low": 8095.71,
-      "close": 8115.75,
-      "volume": 57957000
+      "last_price": 8258.2598,
+      "last_date": "2026-05-25",
+      "open": 8185.4399,
+      "high": 8280.9805,
+      "low": 8183.71,
+      "close": 8258.2598,
+      "volume": 0
     },
     "GC=F": {
       "ticker": "GC=F",
-      "last_price": 4521.0,
-      "last_date": "2026-05-22",
-      "open": 4519.5,
-      "high": 4530.2998,
-      "low": 4519.1001,
-      "close": 4521.0,
-      "volume": 426
+      "last_price": 4523.2002,
+      "last_date": "2026-05-25",
+      "open": 4532.0,
+      "high": 4582.6001,
+      "low": 4531.2998,
+      "close": 4523.2002,
+      "volume": 59323
     },
     "CL=F": {
       "ticker": "CL=F",
       "last_price": 96.6,
-      "last_date": "2026-05-22",
-      "open": 98.0,
-      "high": 99.43,
-      "low": 94.73,
+      "last_date": "2026-05-25",
+      "open": 93.88,
+      "high": 93.9,
+      "low": 90.32,
       "close": 96.6,
-      "volume": 345482
+      "volume": 97779
     }
   },
   "errors": {
