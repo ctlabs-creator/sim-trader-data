@@ -1,0 +1,65 @@
+name: Validate producer (non-destructive)
+
+# Manual trigger only. Builds the NEW producer's artifacts into a scratch
+# directory (_validation/) and uploads them for inspection. It NEVER commits
+# or pushes, and writes nothing to the repo root -- so the live history.json /
+# prices.json that the running app fetches are physically untouched. The worst
+# this workflow can do is fail; it cannot corrupt production.
+#
+# Run it from the Actions tab -> "Validate producer (non-destructive)" ->
+# "Run workflow". When it finishes, read the "Sanity report" step in the log
+# for pass/fail, and download the "sim-trader-artifacts" zip to inspect the
+# raw JSON if you want.
+#
+# Assumes producer.py, test_producer.py and validate_artifacts.py live at the
+# repo root. Adjust paths below if you put them elsewhere.
+
+on:
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      # Fast gate: mocked unit tests, no network. If the code is broken we stop
+      # here rather than spending a full 45-ticker backfill to find out.
+      - name: Unit tests (mocked, no network)
+        id: tests
+        run: python test_producer.py
+
+      - name: Install yfinance
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install yfinance
+
+      # Cold backfill: _validation is empty on a fresh checkout, so the
+      # stateless producer hydrates nothing and fetches 5y for every ticker.
+      # This is the slow step (~45 tickers x history + dividends).
+      - name: Build history artifacts (cold backfill -> scratch dir)
+        run: python producer.py daily --out _validation --db ":memory:"
+
+      # Runs even if the history build hit partial failures, so we still get a
+      # snapshot + report + downloadable artifacts to inspect.
+      - name: Build prices snapshot
+        if: ${{ !cancelled() && steps.tests.outcome == 'success' }}
+        run: python producer.py prices --out _validation --db ":memory:"
+
+      - name: Sanity report
+        if: ${{ !cancelled() && steps.tests.outcome == 'success' }}
+        run: python validate_artifacts.py _validation
+
+      - name: Upload artifacts for inspection
+        if: ${{ !cancelled() && steps.tests.outcome == 'success' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: sim-trader-artifacts-${{ github.run_number }}
+          path: _validation/
+          if-no-files-found: warn
