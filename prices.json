@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-06-10T17:40:52.703957+00:00",
+  "fetched_at": "2026-06-10T20:12:03.399372+00:00",
   "universe_size": 46,
   "ok_count": 45,
   "error_count": 1,
@@ -12,7 +12,7 @@
       "high": 0.987,
       "low": 0.964,
       "close": 0.9722,
-      "volume": 146598353
+      "volume": 146599021
     },
     "SHEL.L": {
       "ticker": "SHEL.L",
@@ -22,7 +22,7 @@
       "high": 32.43,
       "low": 31.615,
       "close": 32.39,
-      "volume": 7160622
+      "volume": 7160652
     },
     "AZN.L": {
       "ticker": "AZN.L",
@@ -32,7 +32,7 @@
       "high": 137.3,
       "low": 133.76,
       "close": 134.64,
-      "volume": 1633418
+      "volume": 1633421
     },
     "ULVR.L": {
       "ticker": "ULVR.L",
@@ -52,7 +52,7 @@
       "high": 4.507,
       "low": 4.398,
       "close": 4.458,
-      "volume": 52605240
+      "volume": 52605245
     },
     "GSK.L": {
       "ticker": "GSK.L",
@@ -62,7 +62,7 @@
       "high": 19.295,
       "low": 18.905,
       "close": 19.215,
-      "volume": 5595304
+      "volume": 5595306
     },
     "HSBA.L": {
       "ticker": "HSBA.L",
@@ -72,7 +72,7 @@
       "high": 12.972,
       "low": 12.672,
       "close": 12.934,
-      "volume": 23329887
+      "volume": 23329899
     },
     "BP.L": {
       "ticker": "BP.L",
@@ -82,7 +82,7 @@
       "high": 5.405,
       "low": 5.262,
       "close": 5.405,
-      "volume": 24531954
+      "volume": 24532013
     },
     "RIO.L": {
       "ticker": "RIO.L",
@@ -92,7 +92,7 @@
       "high": 75.84,
       "low": 74.01,
       "close": 74.79,
-      "volume": 2288076
+      "volume": 2288075
     },
     "VOD.L": {
       "ticker": "VOD.L",
@@ -102,7 +102,7 @@
       "high": 1.128,
       "low": 1.09,
       "close": 1.128,
-      "volume": 60344246
+      "volume": 60344250
     },
     "TSCO.L": {
       "ticker": "TSCO.L",
@@ -112,7 +112,7 @@
       "high": 4.692,
       "low": 4.576,
       "close": 4.692,
-      "volume": 13727266
+      "volume": 13727317
     },
     "DGE.L": {
       "ticker": "DGE.L",
@@ -132,7 +132,7 @@
       "high": 5.9841,
       "low": 5.836,
       "close": 5.862,
-      "volume": 14059076
+      "volume": 14059128
     },
     "GLEN.L": {
       "ticker": "GLEN.L",
@@ -142,7 +142,7 @@
       "high": 5.69,
       "low": 4.839,
       "close": 5.64,
-      "volume": 23722726
+      "volume": 23722739
     },
     "AAL.L": {
       "ticker": "AAL.L",
@@ -156,113 +156,113 @@
     },
     "AAPL": {
       "ticker": "AAPL",
-      "last_price": 292.71,
+      "last_price": 291.58,
       "last_date": "2026-06-10",
       "open": 290.765,
-      "high": 293.2295,
+      "high": 294.745,
       "low": 287.38,
-      "close": 292.72,
-      "volume": 27398482
+      "close": 291.58,
+      "volume": 49237715
     },
     "MSFT": {
       "ticker": "MSFT",
-      "last_price": 400.58,
+      "last_price": 397.36,
       "last_date": "2026-06-10",
       "open": 398.41,
       "high": 405.04,
-      "low": 397.47,
-      "close": 400.5401,
-      "volume": 15761070
+      "low": 397.18,
+      "close": 397.36,
+      "volume": 28477975
     },
     "GOOGL": {
       "ticker": "GOOGL",
-      "last_price": 356.21,
+      "last_price": 356.38,
       "last_date": "2026-06-10",
       "open": 362.985,
       "high": 368.555,
-      "low": 355.75,
-      "close": 356.21,
-      "volume": 16478822
+      "low": 355.23,
+      "close": 356.38,
+      "volume": 30683028
     },
     "AMZN": {
       "ticker": "AMZN",
-      "last_price": 238.117,
+      "last_price": 238.0,
       "last_date": "2026-06-10",
       "open": 243.605,
       "high": 244.05,
-      "low": 237.87,
-      "close": 238.155,
-      "volume": 20493878
+      "low": 237.45,
+      "close": 238.0,
+      "volume": 36783337
     },
     "NVDA": {
       "ticker": "NVDA",
-      "last_price": 202.12,
+      "last_price": 200.42,
       "last_date": "2026-06-10",
       "open": 204.425,
       "high": 207.22,
-      "low": 201.61,
-      "close": 202.12,
-      "volume": 91420426
+      "low": 199.92,
+      "close": 200.42,
+      "volume": 150398224
     },
     "META": {
       "ticker": "META",
-      "last_price": 574.395,
+      "last_price": 570.98,
       "last_date": "2026-06-10",
       "open": 580.73,
       "high": 591.3,
-      "low": 574.04,
-      "close": 574.395,
-      "volume": 6866288
+      "low": 570.6,
+      "close": 570.98,
+      "volume": 14448169
     },
     "TSLA": {
       "ticker": "TSLA",
-      "last_price": 383.07,
+      "last_price": 381.59,
       "last_date": "2026-06-10",
       "open": 391.41,
       "high": 397.09,
-      "low": 381.31,
-      "close": 383.1192,
-      "volume": 32304344
+      "low": 380.15,
+      "close": 381.59,
+      "volume": 47173605
     },
     "NFLX": {
       "ticker": "NFLX",
-      "last_price": 82.475,
+      "last_price": 82.0,
       "last_date": "2026-06-10",
       "open": 81.72,
       "high": 82.7475,
       "low": 80.9772,
-      "close": 82.475,
-      "volume": 18393123
+      "close": 82.0,
+      "volume": 33154352
     },
     "AMD": {
       "ticker": "AMD",
-      "last_price": 454.14,
+      "last_price": 452.4,
       "last_date": "2026-06-10",
       "open": 467.97,
       "high": 477.4499,
-      "low": 451.4101,
-      "close": 454.14,
-      "volume": 16157579
+      "low": 448.33,
+      "close": 452.4,
+      "volume": 27042991
     },
     "PLTR": {
       "ticker": "PLTR",
-      "last_price": 131.4215,
+      "last_price": 130.21,
       "last_date": "2026-06-10",
       "open": 129.325,
       "high": 133.185,
       "low": 128.8,
-      "close": 131.4215,
-      "volume": 16672202
+      "close": 130.21,
+      "volume": 26455839
     },
     "COIN": {
       "ticker": "COIN",
-      "last_price": 155.48,
+      "last_price": 153.97,
       "last_date": "2026-06-10",
       "open": 152.94,
       "high": 161.71,
       "low": 152.19,
-      "close": 155.48,
-      "volume": 3771533
+      "close": 153.97,
+      "volume": 6156130
     },
     "VWRP.L": {
       "ticker": "VWRP.L",
@@ -336,43 +336,43 @@
     },
     "SPY": {
       "ticker": "SPY",
-      "last_price": 728.385,
+      "last_price": 725.49,
       "last_date": "2026-06-10",
       "open": 733.39,
       "high": 738.38,
-      "low": 728.015,
-      "close": 728.385,
-      "volume": 28919853
+      "low": 725.33,
+      "close": 725.49,
+      "volume": 51756696
     },
     "QQQ": {
       "ticker": "QQQ",
-      "last_price": 696.5,
+      "last_price": 693.69,
       "last_date": "2026-06-10",
       "open": 701.495,
       "high": 711.26,
-      "low": 696.07,
-      "close": 696.5,
-      "volume": 40139828
+      "low": 692.93,
+      "close": 693.69,
+      "volume": 60321643
     },
     "VOO": {
       "ticker": "VOO",
-      "last_price": 669.63,
+      "last_price": 666.96,
       "last_date": "2026-06-10",
       "open": 674.315,
       "high": 678.875,
-      "low": 669.3201,
-      "close": 669.63,
-      "volume": 3624434
+      "low": 666.88,
+      "close": 666.96,
+      "volume": 5733657
     },
     "VTI": {
       "ticker": "VTI",
-      "last_price": 359.51,
+      "last_price": 358.06,
       "last_date": "2026-06-10",
       "open": 361.87,
       "high": 364.56,
-      "low": 359.36,
-      "close": 359.51,
-      "volume": 1970802
+      "low": 357.9,
+      "close": 358.06,
+      "volume": 3184848
     },
     "^FTSE": {
       "ticker": "^FTSE",
@@ -386,33 +386,33 @@
     },
     "^GSPC": {
       "ticker": "^GSPC",
-      "last_price": 7295.9502,
+      "last_price": 7266.9902,
       "last_date": "2026-06-10",
       "open": 7350.54,
       "high": 7396.5601,
-      "low": 7292.6602,
-      "close": 7295.9502,
-      "volume": 1589938000
+      "low": 7265.9302,
+      "close": 7266.9902,
+      "volume": 3232774000
     },
     "^NDX": {
       "ticker": "^NDX",
-      "last_price": 28607.6914,
+      "last_price": 28508.0273,
       "last_date": "2026-06-10",
       "open": 28893.8242,
       "high": 29212.3828,
-      "low": 28589.4375,
-      "close": 28607.6914,
-      "volume": 686321989
+      "low": 28462.916,
+      "close": 28508.0273,
+      "volume": 1243052000
     },
     "^DJI": {
       "ticker": "^DJI",
-      "last_price": 50111.9297,
+      "last_price": 49918.7812,
       "last_date": "2026-06-10",
       "open": 50760.1211,
       "high": 50769.2617,
-      "low": 50095.5586,
-      "close": 50112.8008,
-      "volume": 265575757
+      "low": 49909.0703,
+      "close": 49918.7812,
+      "volume": 497361273
     },
     "^N225": {
       "ticker": "^N225",
@@ -436,23 +436,23 @@
     },
     "GC=F": {
       "ticker": "GC=F",
-      "last_price": 4129.7002,
+      "last_price": 4101.5,
       "last_date": "2026-06-10",
       "open": 4276.1001,
       "high": 4281.1001,
-      "low": 4128.0,
-      "close": 4129.7002,
-      "volume": 177531
+      "low": 4101.0,
+      "close": 4101.5,
+      "volume": 196525
     },
     "CL=F": {
       "ticker": "CL=F",
-      "last_price": 91.55,
+      "last_price": 90.28,
       "last_date": "2026-06-10",
       "open": 89.4,
-      "high": 91.57,
+      "high": 91.84,
       "low": 87.39,
-      "close": 91.55,
-      "volume": 190545
+      "close": 90.28,
+      "volume": 245757
     }
   },
   "errors": {
