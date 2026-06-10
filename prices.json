@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-06-10T20:12:03.399372+00:00",
+  "fetched_at": "2026-06-10T22:23:48.731453+00:00",
   "universe_size": 46,
   "ok_count": 45,
   "error_count": 1,
@@ -172,7 +172,7 @@
       "high": 405.04,
       "low": 397.18,
       "close": 397.36,
-      "volume": 28477975
+      "volume": 30387335
     },
     "GOOGL": {
       "ticker": "GOOGL",
@@ -182,7 +182,7 @@
       "high": 368.555,
       "low": 355.23,
       "close": 356.38,
-      "volume": 30683028
+      "volume": 31693010
     },
     "AMZN": {
       "ticker": "AMZN",
@@ -192,7 +192,7 @@
       "high": 244.05,
       "low": 237.45,
       "close": 238.0,
-      "volume": 36783337
+      "volume": 38263040
     },
     "NVDA": {
       "ticker": "NVDA",
@@ -212,7 +212,7 @@
       "high": 591.3,
       "low": 570.6,
       "close": 570.98,
-      "volume": 14448169
+      "volume": 16735589
     },
     "TSLA": {
       "ticker": "TSLA",
@@ -222,7 +222,7 @@
       "high": 397.09,
       "low": 380.15,
       "close": 381.59,
-      "volume": 47173605
+      "volume": 49166017
     },
     "NFLX": {
       "ticker": "NFLX",
@@ -232,7 +232,7 @@
       "high": 82.7475,
       "low": 80.9772,
       "close": 82.0,
-      "volume": 33154352
+      "volume": 34124945
     },
     "AMD": {
       "ticker": "AMD",
@@ -242,7 +242,7 @@
       "high": 477.4499,
       "low": 448.33,
       "close": 452.4,
-      "volume": 27042991
+      "volume": 27523098
     },
     "PLTR": {
       "ticker": "PLTR",
@@ -252,7 +252,7 @@
       "high": 133.185,
       "low": 128.8,
       "close": 130.21,
-      "volume": 26455839
+      "volume": 29150613
     },
     "COIN": {
       "ticker": "COIN",
@@ -262,7 +262,7 @@
       "high": 161.71,
       "low": 152.19,
       "close": 153.97,
-      "volume": 6156130
+      "volume": 6298618
     },
     "VWRP.L": {
       "ticker": "VWRP.L",
@@ -336,13 +336,13 @@
     },
     "SPY": {
       "ticker": "SPY",
-      "last_price": 725.49,
+      "last_price": 725.43,
       "last_date": "2026-06-10",
       "open": 733.39,
       "high": 738.38,
       "low": 725.33,
-      "close": 725.49,
-      "volume": 51756696
+      "close": 725.43,
+      "volume": 57773708
     },
     "QQQ": {
       "ticker": "QQQ",
@@ -356,23 +356,23 @@
     },
     "VOO": {
       "ticker": "VOO",
-      "last_price": 666.96,
+      "last_price": 667.05,
       "last_date": "2026-06-10",
       "open": 674.315,
       "high": 678.875,
       "low": 666.88,
-      "close": 666.96,
-      "volume": 5733657
+      "close": 667.05,
+      "volume": 12935735
     },
     "VTI": {
       "ticker": "VTI",
-      "last_price": 358.06,
+      "last_price": 358.04,
       "last_date": "2026-06-10",
       "open": 361.87,
       "high": 364.56,
       "low": 357.9,
-      "close": 358.06,
-      "volume": 3184848
+      "close": 358.04,
+      "volume": 3373794
     },
     "^FTSE": {
       "ticker": "^FTSE",
@@ -392,7 +392,7 @@
       "high": 7396.5601,
       "low": 7265.9302,
       "close": 7266.9902,
-      "volume": 3232774000
+      "volume": 3253456000
     },
     "^NDX": {
       "ticker": "^NDX",
@@ -402,7 +402,7 @@
       "high": 29212.3828,
       "low": 28462.916,
       "close": 28508.0273,
-      "volume": 1243052000
+      "volume": 1266863000
     },
     "^DJI": {
       "ticker": "^DJI",
@@ -412,7 +412,7 @@
       "high": 50769.2617,
       "low": 49909.0703,
       "close": 49918.7812,
-      "volume": 497361273
+      "volume": 503791535
     },
     "^N225": {
       "ticker": "^N225",
@@ -426,33 +426,33 @@
     },
     "^FCHI": {
       "ticker": "^FCHI",
-      "last_price": 8161.8301,
+      "last_price": 8161.83,
       "last_date": "2026-06-10",
       "open": 8223.0498,
       "high": 8240.6299,
       "low": 8113.0,
-      "close": 8161.8301,
+      "close": null,
       "volume": 0
     },
     "GC=F": {
       "ticker": "GC=F",
-      "last_price": 4101.5,
+      "last_price": 4076.8,
       "last_date": "2026-06-10",
-      "open": 4276.1001,
-      "high": 4281.1001,
-      "low": 4101.0,
-      "close": 4101.5,
-      "volume": 196525
+      "open": 4094.3999,
+      "high": 4094.3999,
+      "low": 4072.3999,
+      "close": 4076.8,
+      "volume": 2472
     },
     "CL=F": {
       "ticker": "CL=F",
-      "last_price": 90.28,
+      "last_price": 92.29,
       "last_date": "2026-06-10",
-      "open": 89.4,
-      "high": 91.84,
-      "low": 87.39,
-      "close": 90.28,
-      "volume": 245757
+      "open": 92.25,
+      "high": 92.45,
+      "low": 91.9,
+      "close": 92.29,
+      "volume": 1901
     }
   },
   "errors": {
