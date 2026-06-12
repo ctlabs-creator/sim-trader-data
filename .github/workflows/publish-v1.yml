@@ -1,0 +1,83 @@
+name: Publish v1 artifacts
+
+# Manual trigger only. Builds the v1 artifact set (universe.json,
+# prices.json, calendar.json, history/*.json) and commits it to the v1/
+# directory -- and ONLY the v1/ directory. The legacy history.json /
+# prices.json at the repo root that the old app reads are physically
+# untouched: the only `git add` below is scoped to v1/, so the worst this
+# workflow can do to production is fail.
+#
+# The producer is stateless: it hydrates from whatever artifacts are
+# already committed under v1/. So the FIRST run is a cold 5-year backfill
+# of every ticker (slow, several minutes); every later run is an
+# incremental append + 30-day drift check (fast).
+#
+# Publication is gated twice: the mocked unit tests must pass before any
+# network fetch, and validate_artifacts.py must PASS on the built output
+# before anything is committed. A failed validation means nothing is
+# published -- the previous v1/ stays live.
+#
+# Run from the Actions tab -> "Publish v1 artifacts" -> "Run workflow".
+
+on:
+  workflow_dispatch:
+
+# Never let two publishes interleave -- a half-committed artifact set is
+# exactly the kind of torn state the version mechanism can't represent.
+concurrency:
+  group: publish-v1
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      # Fast gate: mocked unit tests, no network. Broken code stops here.
+      - name: Unit tests (mocked, no network)
+        run: python test_producer.py
+
+      - name: Install yfinance
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install yfinance
+
+      # Hydrates from the committed v1/ artifacts (no-op on first run),
+      # appends new bars, runs the 30-day drift check, regenerates any
+      # changed history files + the index + the calendar.
+      - name: Build history artifacts
+        run: python producer.py daily --out v1 --db ":memory:"
+
+      - name: Build prices snapshot
+        run: python producer.py prices --out v1 --db ":memory:"
+
+      # Publication gate: structural problems exit non-zero and stop the
+      # job before the commit step. yfinance fetch errors are warnings --
+      # partial data is acceptable and is named in prices.json's errors.
+      - name: Validate before publishing
+        run: python validate_artifacts.py v1
+
+      # Scoped to v1/ ONLY -- this is the line that protects the legacy
+      # root files. "nothing to commit" (weekend, no drift) is a clean
+      # success, not a failure.
+      - name: Commit and push v1 artifacts
+        run: |
+          git config user.name "producer-bot"
+          git config user.email "actions@github.com"
+          git add v1
+          if git diff --cached --quiet; then
+            echo "No artifact changes to publish."
+            exit 0
+          fi
+          git commit -m "Publish v1 artifacts ($(date -u +%Y-%m-%dT%H:%MZ))"
+          git push
