@@ -1,0 +1,148 @@
+name: Publish v1 artifacts
+
+# Builds the v1 artifact set (universe.json, prices.json, calendar.json,
+# history/*.json) and commits it to the v1/ directory -- and ONLY the v1/
+# directory. The legacy history.json / prices.json at the repo root that the
+# old app reads are physically untouched: the only `git add` below is scoped
+# to v1/, so the worst this workflow can do to production is fail.
+#
+# Two run MODES:
+#   * prices -- refresh prices.json only (cheap: hydrate metadata, fetch 45
+#     snapshots, write one file). This is the heartbeat.
+#   * daily  -- full run: append new bars + 30-day drift check + regenerate
+#     changed history files + index + calendar, THEN also refresh prices.
+#
+# The producer is stateless: it hydrates from whatever artifacts are already
+# committed under v1/. So the FIRST ever run is a cold 5-year backfill of
+# every ticker (slow, several minutes); every later run is incremental (fast).
+#
+# Triggers:
+#   * Every 15 min, 07:00-21:45 UTC, ALL 7 DAYS -> prices mode. Raises the
+#     ATTEMPT rate, not a delivery guarantee: GitHub free-tier `schedule:`
+#     under-fires and is delayed at peak (esp. Monday am). Expect an effective
+#     cadence that wobbles, not a metronome. Weekends fetch the same Friday
+#     close every run -- only `fetched_at` moves; that's the live heartbeat,
+#     not stale data. The in-app "Refresh prices" manual kick is the backstop.
+#   * 22:30 UTC, ALL 7 DAYS -> daily mode. A late daily run self-heals via the
+#     next drift check, so its reliability bar is lower. Weekend daily runs
+#     usually find no change and commit nothing.
+#   * Manual dispatch -> pick the mode from the dropdown (defaults to daily).
+#
+# Note on UTC: cron is UTC-only, so the 07:00-21:45 window is fixed in UTC and
+# the wall-clock window shifts an hour with BST/GMT. It comfortably covers LSE
+# and US sessions either way; not worth a DST dance.
+#
+# Publication is gated twice: the mocked unit tests must pass before any
+# network fetch, and validate_artifacts.py must PASS on the built output
+# before anything is committed. A failed validation means nothing is
+# published -- the previous v1/ stays live.
+#
+# Run manually from the Actions tab -> "Publish v1 artifacts" -> "Run
+# workflow" -> choose a mode.
+
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "Run mode"
+        type: choice
+        default: daily
+        options:
+          - daily
+          - prices
+  schedule:
+    # Prices heartbeat: every 15 min within the active window, all 7 days.
+    - cron: "*/15 7-21 * * *"
+    # Full daily job: once a day at 22:30 UTC, all 7 days.
+    - cron: "30 22 * * *"
+
+# Never let two publishes interleave -- a half-committed artifact set is
+# exactly the kind of torn state the version mechanism can't represent. This
+# single group covers BOTH cron entries, manual runs, and the future in-app
+# kick: a prices run and the daily run can never commit on top of each other.
+# A run that arrives while another holds the group simply waits (it is not
+# cancelled), so a missed 15-min tick is skipped, never stacked.
+concurrency:
+  group: publish-v1
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # Resolve the run mode for all three trigger paths into one output:
+      #   * manual dispatch -> the chosen input
+      #   * the 22:30 cron   -> daily
+      #   * any other cron   -> prices
+      # `github.event.schedule` is the exact cron STRING that fired, so we
+      # match on it. If a future cron is added, extend this match.
+      - name: Resolve run mode
+        id: mode
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            MODE="${{ github.event.inputs.mode }}"
+          elif [ "${{ github.event.schedule }}" = "30 22 * * *" ]; then
+            MODE="daily"
+          else
+            MODE="prices"
+          fi
+          echo "mode=$MODE" >> "$GITHUB_OUTPUT"
+          echo "Resolved run mode: $MODE (event: ${{ github.event_name }}, schedule: '${{ github.event.schedule }}')"
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      # Fast gate: mocked unit tests, no network. Broken code stops here,
+      # before we spend any fetch time. Runs in both modes.
+      - name: Unit tests (mocked, no network)
+        run: python test_producer.py
+
+      - name: Install yfinance
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install yfinance
+
+      # DAILY ONLY. Hydrates from the committed v1/ artifacts (cold start ->
+      # full backfill), appends new bars, runs the 30-day drift check,
+      # regenerates any changed history files + the index + the calendar.
+      - name: Build history artifacts (daily only)
+        if: steps.mode.outputs.mode == 'daily'
+        run: python producer.py daily --out v1 --db ":memory:"
+
+      # BOTH MODES. In prices mode the producer hydrates metadata only (no
+      # history read), fetches the 45 snapshots, and writes prices.json. In
+      # daily mode this refreshes the snapshot after the history build.
+      - name: Build prices snapshot
+        run: python producer.py prices --out v1 --db ":memory:"
+
+      # Publication gate: structural problems exit non-zero and stop the job
+      # before the commit step. yfinance fetch errors are warnings -- partial
+      # data is acceptable and is named in prices.json's errors. Runs in both
+      # modes (a prices-only run still produces a fully-valid v1/ to check).
+      - name: Validate before publishing
+        run: python validate_artifacts.py v1
+
+      # Scoped to v1/ ONLY -- this is the line that protects the legacy root
+      # files. "nothing to commit" is a clean success, not a failure: it's the
+      # normal weekend/no-drift daily outcome, and is essentially impossible
+      # for a prices run (fetched_at always changes), which is exactly why the
+      # heartbeat is visible in the commit log.
+      - name: Commit and push v1 artifacts
+        run: |
+          git config user.name "producer-bot"
+          git config user.email "actions@github.com"
+          git add v1
+          if git diff --cached --quiet; then
+            echo "No artifact changes to publish."
+            exit 0
+          fi
+          git commit -m "Publish v1 artifacts: ${{ steps.mode.outputs.mode }} ($(date -u +%Y-%m-%dT%H:%MZ))"
+          git push
