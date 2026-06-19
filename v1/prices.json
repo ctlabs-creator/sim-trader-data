@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "fetched_at": "2026-06-19T20:10:58Z",
+  "fetched_at": "2026-06-19T21:20:15Z",
   "status": "healthy",
   "prices": {
     "AAL.L": {
@@ -359,8 +359,8 @@
       "open": 51571.8516,
       "high": 51949.2617,
       "low": 51554.5312,
-      "close": null,
-      "volume": 985372653,
+      "close": 51564.6992,
+      "volume": 985370000,
       "last_date": "2026-06-18"
     },
     "^FCHI": {
@@ -401,11 +401,11 @@
     },
     "^NDX": {
       "last_price": 30406.193,
-      "open": 30261.6035,
-      "high": 30463.7734,
+      "open": 30261.5996,
+      "high": 30463.7695,
       "low": 30089.3496,
-      "close": null,
-      "volume": 2644507000,
+      "close": 30406.1895,
+      "volume": 18286150000,
       "last_date": "2026-06-18"
     }
   },
