@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "fetched_at": "2026-06-20T19:53:58Z",
+  "fetched_at": "2026-06-20T21:02:50Z",
   "status": "healthy",
   "prices": {
     "AAL.L": {
@@ -355,12 +355,12 @@
       "last_date": "2026-06-19"
     },
     "^DJI": {
-      "last_price": 51564.6992,
+      "last_price": 51564.7,
       "open": 51571.8516,
       "high": 51949.2617,
       "low": 51554.5312,
-      "close": 51564.6992,
-      "volume": 985370000,
+      "close": null,
+      "volume": 985372653,
       "last_date": "2026-06-18"
     },
     "^FCHI": {
@@ -382,12 +382,12 @@
       "last_date": "2026-06-19"
     },
     "^GSPC": {
-      "last_price": 7500.5801,
+      "last_price": 7500.58,
       "open": 7487.3599,
       "high": 7511.0698,
       "low": 7468.3198,
-      "close": 7500.5801,
-      "volume": 9061110000,
+      "close": null,
+      "volume": 6324161000,
       "last_date": "2026-06-18"
     },
     "^N225": {
@@ -400,12 +400,12 @@
       "last_date": "2026-06-19"
     },
     "^NDX": {
-      "last_price": 30406.1895,
-      "open": 30261.5996,
-      "high": 30463.7695,
+      "last_price": 30406.193,
+      "open": 30261.6035,
+      "high": 30463.7734,
       "low": 30089.3496,
-      "close": 30406.1895,
-      "volume": 18286150000,
+      "close": null,
+      "volume": 2644507000,
       "last_date": "2026-06-18"
     }
   },
