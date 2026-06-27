@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "fetched_at": "2026-06-27T12:16:34Z",
+  "fetched_at": "2026-06-27T14:11:42Z",
   "status": "healthy",
   "prices": {
     "AAL.L": {
@@ -374,11 +374,11 @@
     },
     "^FTSE": {
       "last_price": 10508.0,
-      "open": 10530.2002,
-      "high": 10530.2002,
-      "low": 10404.7002,
-      "close": 10508.0,
-      "volume": 763639200,
+      "open": 10530.1797,
+      "high": 10530.1797,
+      "low": 10404.7305,
+      "close": null,
+      "volume": 0,
       "last_date": "2026-06-26"
     },
     "^GSPC": {
@@ -395,8 +395,8 @@
       "open": 71587.7109,
       "high": 71786.2812,
       "low": 68639.8438,
-      "close": 69360.8828,
-      "volume": 156900000,
+      "close": null,
+      "volume": 0,
       "last_date": "2026-06-26"
     },
     "^NDX": {
