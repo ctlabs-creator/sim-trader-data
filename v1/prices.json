@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "fetched_at": "2026-06-27T23:35:22Z",
+  "fetched_at": "2026-06-28T09:51:28Z",
   "status": "healthy",
   "prices": {
     "AAL.L": {
@@ -72,7 +72,7 @@
       "high": 71.86,
       "low": 68.56,
       "close": 69.23,
-      "volume": 228065,
+      "volume": 222826,
       "last_date": "2026-06-26"
     },
     "COIN": {
@@ -103,7 +103,7 @@
       "last_date": "2026-06-26"
     },
     "GC=F": {
-      "last_price": 4078.7,
+      "last_price": 4096.3,
       "open": 4078.7,
       "high": 4078.7,
       "low": 4078.7,
