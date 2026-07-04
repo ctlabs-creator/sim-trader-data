@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "fetched_at": "2026-07-04T19:12:40Z",
+  "fetched_at": "2026-07-04T20:16:21Z",
   "status": "healthy",
   "prices": {
     "AAL.L": {
@@ -36,7 +36,7 @@
       "high": 246.72,
       "low": 241.08,
       "close": 242.67,
-      "volume": 48298100,
+      "volume": 48246400,
       "last_date": "2026-07-02"
     },
     "AZN.L": {
@@ -126,7 +126,7 @@
       "high": 364.21,
       "low": 353.42,
       "close": 359.91,
-      "volume": 25999300,
+      "volume": 25974800,
       "last_date": "2026-07-02"
     },
     "GSK.L": {
@@ -189,7 +189,7 @@
       "high": 78.44,
       "low": 74.91,
       "close": 77.65,
-      "volume": 55541700,
+      "volume": 55456500,
       "last_date": "2026-07-02"
     },
     "NVDA": {
@@ -198,7 +198,7 @@
       "high": 200.06,
       "low": 192.35,
       "close": 194.83,
-      "volume": 142385500,
+      "volume": 142068700,
       "last_date": "2026-07-02"
     },
     "NWG.L": {
