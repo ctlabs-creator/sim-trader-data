@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "fetched_at": "2026-07-04T23:33:45Z",
+  "fetched_at": "2026-07-05T09:33:16Z",
   "status": "healthy",
   "prices": {
     "AAL.L": {
@@ -81,7 +81,7 @@
       "high": 173.09,
       "low": 163.22,
       "close": 165.48,
-      "volume": 9693800,
+      "volume": 9656000,
       "last_date": "2026-07-02"
     },
     "DGE.L": {
@@ -171,7 +171,7 @@
       "high": 610.0,
       "low": 580.42,
       "close": 582.9,
-      "volume": 21750500,
+      "volume": 21705900,
       "last_date": "2026-07-02"
     },
     "MSFT": {
@@ -216,7 +216,7 @@
       "high": 132.88,
       "low": 127.95,
       "close": 129.3,
-      "volume": 60789400,
+      "volume": 60641000,
       "last_date": "2026-07-02"
     },
     "QQQ": {
@@ -270,7 +270,7 @@
       "high": 432.35,
       "low": 389.3,
       "close": 393.45,
-      "volume": 73915800,
+      "volume": 73717700,
       "last_date": "2026-07-02"
     },
     "ULVR.L": {
@@ -315,7 +315,7 @@
       "high": 690.5,
       "low": 680.22,
       "close": 684.84,
-      "volume": 7012700,
+      "volume": 6994700,
       "last_date": "2026-07-02"
     },
     "VTI": {
