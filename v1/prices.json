@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "fetched_at": "2026-07-05T16:42:42Z",
+  "fetched_at": "2026-07-05T17:44:32Z",
   "status": "healthy",
   "prices": {
     "AAL.L": {
@@ -72,7 +72,7 @@
       "high": 69.26,
       "low": 68.08,
       "close": 68.78,
-      "volume": 48758,
+      "volume": 48760,
       "last_date": "2026-07-03"
     },
     "COIN": {
