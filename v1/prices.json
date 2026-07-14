@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "fetched_at": "2026-07-14T21:27:46Z",
+  "fetched_at": "2026-07-14T22:29:14Z",
   "status": "healthy",
   "prices": {
     "AAL.L": {
@@ -67,12 +67,12 @@
       "last_date": "2026-07-14"
     },
     "CL=F": {
-      "last_price": 79.83,
-      "open": 78.04,
-      "high": 81.27,
-      "low": 77.84,
-      "close": 79.83,
-      "volume": 377833,
+      "last_price": 79.95,
+      "open": 79.74,
+      "high": 80.24,
+      "low": 79.59,
+      "close": 79.95,
+      "volume": 1124,
       "last_date": "2026-07-14"
     },
     "COIN": {
@@ -103,12 +103,12 @@
       "last_date": "2026-07-14"
     },
     "GC=F": {
-      "last_price": 4058.3,
-      "open": 4005.8999,
-      "high": 4112.5,
-      "low": 3990.3999,
-      "close": 4058.3,
-      "volume": 144939,
+      "last_price": 4057.1001,
+      "open": 4059.8,
+      "high": 4060.0,
+      "low": 4054.8,
+      "close": 4057.1001,
+      "volume": 430,
       "last_date": "2026-07-14"
     },
     "GLEN.L": {
@@ -364,11 +364,11 @@
       "last_date": "2026-07-14"
     },
     "^FCHI": {
-      "last_price": 8366.8496,
+      "last_price": 8366.85,
       "open": 8288.5,
       "high": 8375.79,
       "low": 8274.8896,
-      "close": 8366.8496,
+      "close": null,
       "volume": 0,
       "last_date": "2026-07-14"
     },
@@ -405,7 +405,7 @@
       "high": 29693.7734,
       "low": 29368.8711,
       "close": 29586.2871,
-      "volume": 1143457000,
+      "volume": 1143496000,
       "last_date": "2026-07-14"
     }
   },
