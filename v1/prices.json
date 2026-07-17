@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "fetched_at": "2026-07-17T21:29:37Z",
+  "fetched_at": "2026-07-17T22:22:02Z",
   "status": "healthy",
   "prices": {
     "AAL.L": {
@@ -364,11 +364,11 @@
       "last_date": "2026-07-17"
     },
     "^FCHI": {
-      "last_price": 8338.8096,
+      "last_price": 8338.81,
       "open": 8326.7402,
       "high": 8350.1904,
       "low": 8282.1699,
-      "close": 8338.8096,
+      "close": null,
       "volume": 0,
       "last_date": "2026-07-17"
     },
@@ -405,7 +405,7 @@
       "high": 28867.4004,
       "low": 28231.3203,
       "close": 28592.6582,
-      "volume": 1630659000,
+      "volume": 1630670000,
       "last_date": "2026-07-17"
     }
   },
