@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "fetched_at": "2026-07-26T17:41:02Z",
+  "fetched_at": "2026-07-26T18:39:55Z",
   "status": "healthy",
   "prices": {
     "AAL.L": {
@@ -14,20 +14,20 @@
     },
     "AAPL": {
       "last_price": 333.02,
-      "open": 321.79,
+      "open": 322.04,
       "high": 334.37,
       "low": 321.62,
-      "close": 333.02,
-      "volume": 47443900,
+      "close": null,
+      "volume": 47460975,
       "last_date": "2026-07-24"
     },
     "AMD": {
       "last_price": 521.95,
-      "open": 546.92,
+      "open": 546.905,
       "high": 549.0,
-      "low": 518.0,
-      "close": 521.95,
-      "volume": 27136700,
+      "low": 518.01,
+      "close": null,
+      "volume": 27162453,
       "last_date": "2026-07-24"
     },
     "AMZN": {
