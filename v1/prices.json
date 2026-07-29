@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "fetched_at": "2026-07-29T22:36:52Z",
+  "fetched_at": "2026-07-29T23:32:22Z",
   "status": "healthy",
   "prices": {
     "AAL.L": {
@@ -8,7 +8,7 @@
       "open": 36.32,
       "high": 36.74,
       "low": 35.19,
-      "close": 36.02,
+      "close": null,
       "volume": 3066880,
       "last_date": "2026-07-29"
     },
@@ -44,7 +44,7 @@
       "open": 130.14,
       "high": 131.64,
       "low": 129.78,
-      "close": 131.34,
+      "close": null,
       "volume": 5161750,
       "last_date": "2026-07-29"
     },
@@ -53,7 +53,7 @@
       "open": 5.05,
       "high": 5.05,
       "low": 4.9155,
-      "close": 4.925,
+      "close": null,
       "volume": 62594784,
       "last_date": "2026-07-29"
     },
@@ -62,17 +62,17 @@
       "open": 5.324,
       "high": 5.456,
       "low": 5.309,
-      "close": 5.435,
+      "close": null,
       "volume": 30978147,
       "last_date": "2026-07-29"
     },
     "CL=F": {
-      "last_price": 84.44,
+      "last_price": 84.63,
       "open": 84.65,
-      "high": 84.7,
-      "low": 84.24,
-      "close": 84.44,
-      "volume": 1135,
+      "high": 84.72,
+      "low": 84.11,
+      "close": 84.63,
+      "volume": 3110,
       "last_date": "2026-07-29"
     },
     "COIN": {
@@ -89,7 +89,7 @@
       "open": 16.5,
       "high": 16.68,
       "low": 16.24,
-      "close": 16.68,
+      "close": null,
       "volume": 4620481,
       "last_date": "2026-07-29"
     },
@@ -98,17 +98,17 @@
       "open": 510.8,
       "high": 513.28,
       "low": 503.0,
-      "close": 504.56,
+      "close": null,
       "volume": 131394,
       "last_date": "2026-07-29"
     },
     "GC=F": {
-      "last_price": 4130.6001,
+      "last_price": 4151.7998,
       "open": 4126.7002,
-      "high": 4135.5,
+      "high": 4158.0,
       "low": 4121.1001,
-      "close": 4130.6001,
-      "volume": 1484,
+      "close": 4151.7998,
+      "volume": 4245,
       "last_date": "2026-07-29"
     },
     "GLEN.L": {
@@ -116,7 +116,7 @@
       "open": 5.177,
       "high": 5.31,
       "low": 5.11,
-      "close": 5.207,
+      "close": null,
       "volume": 26293645,
       "last_date": "2026-07-29"
     },
@@ -134,7 +134,7 @@
       "open": 20.27,
       "high": 20.48,
       "low": 19.815,
-      "close": 20.07,
+      "close": null,
       "volume": 8561057,
       "last_date": "2026-07-29"
     },
@@ -143,7 +143,7 @@
       "open": 15.628,
       "high": 15.818,
       "low": 15.424,
-      "close": 15.478,
+      "close": null,
       "volume": 32208695,
       "last_date": "2026-07-29"
     },
@@ -152,7 +152,7 @@
       "open": 78.3875,
       "high": 78.5125,
       "low": 77.5125,
-      "close": 77.8125,
+      "close": null,
       "volume": 165878,
       "last_date": "2026-07-29"
     },
@@ -161,7 +161,7 @@
       "open": 1.135,
       "high": 1.138,
       "low": 1.1135,
-      "close": 1.1135,
+      "close": null,
       "volume": 82994391,
       "last_date": "2026-07-29"
     },
@@ -206,7 +206,7 @@
       "open": 6.684,
       "high": 6.716,
       "low": 6.606,
-      "close": 6.65,
+      "close": null,
       "volume": 16418671,
       "last_date": "2026-07-29"
     },
@@ -233,7 +233,7 @@
       "open": 69.85,
       "high": 70.74,
       "low": 69.06,
-      "close": 69.77,
+      "close": null,
       "volume": 2402563,
       "last_date": "2026-07-29"
     },
@@ -242,7 +242,7 @@
       "open": 32.84,
       "high": 33.31,
       "low": 32.565,
-      "close": 33.235,
+      "close": null,
       "volume": 10111917,
       "last_date": "2026-07-29"
     },
@@ -260,7 +260,7 @@
       "open": 4.907,
       "high": 5.018,
       "low": 4.877,
-      "close": 5.018,
+      "close": null,
       "volume": 26079983,
       "last_date": "2026-07-29"
     },
@@ -278,7 +278,7 @@
       "open": 49.955,
       "high": 50.1,
       "low": 48.93,
-      "close": 49.86,
+      "close": null,
       "volume": 4824755,
       "last_date": "2026-07-29"
     },
@@ -287,7 +287,7 @@
       "open": 22.235,
       "high": 22.235,
       "low": 22.15,
-      "close": 22.1625,
+      "close": null,
       "volume": 21147,
       "last_date": "2026-07-29"
     },
@@ -296,7 +296,7 @@
       "open": 59.71,
       "high": 60.02,
       "low": 59.125,
-      "close": 59.275,
+      "close": null,
       "volume": 29478,
       "last_date": "2026-07-29"
     },
@@ -305,7 +305,7 @@
       "open": 1.2355,
       "high": 1.238,
       "low": 1.2128,
-      "close": 1.2205,
+      "close": null,
       "volume": 52582928,
       "last_date": "2026-07-29"
     },
@@ -332,7 +332,7 @@
       "open": 47.3,
       "high": 47.46,
       "low": 47.09,
-      "close": 47.255,
+      "close": null,
       "volume": 553557,
       "last_date": "2026-07-29"
     },
@@ -341,7 +341,7 @@
       "open": 106.13,
       "high": 106.3025,
       "low": 104.895,
-      "close": 105.13,
+      "close": null,
       "volume": 202065,
       "last_date": "2026-07-29"
     },
@@ -350,7 +350,7 @@
       "open": 140.28,
       "high": 140.4,
       "low": 138.74,
-      "close": 139.06,
+      "close": null,
       "volume": 431802,
       "last_date": "2026-07-29"
     },
@@ -373,11 +373,11 @@
       "last_date": "2026-07-29"
     },
     "^FTSE": {
-      "last_price": 10908.4102,
+      "last_price": 10908.41,
       "open": 10871.1602,
       "high": 10951.0596,
       "low": 10864.1104,
-      "close": 10908.4102,
+      "close": null,
       "volume": 0,
       "last_date": "2026-07-29"
     },
