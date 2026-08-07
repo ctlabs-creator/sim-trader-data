@@ -1,15 +1,15 @@
 {
   "schema_version": 1,
-  "fetched_at": "2026-08-07T09:13:48Z",
+  "fetched_at": "2026-08-07T10:09:46Z",
   "status": "healthy",
   "prices": {
     "AAL.L": {
-      "last_price": 39.7045,
+      "last_price": 40.11,
       "open": 40.07,
       "high": 40.18,
       "low": 39.49,
-      "close": 39.7045,
-      "volume": 285834,
+      "close": 40.11,
+      "volume": 337897,
       "last_date": "2026-08-07"
     },
     "AAPL": {
@@ -40,39 +40,39 @@
       "last_date": "2026-08-06"
     },
     "AZN.L": {
-      "last_price": 120.14,
+      "last_price": 120.28,
       "open": 118.98,
       "high": 120.96,
       "low": 118.98,
-      "close": 120.14,
-      "volume": 419038,
+      "close": 120.28,
+      "volume": 539133,
       "last_date": "2026-08-07"
     },
     "BARC.L": {
-      "last_price": 5.1615,
+      "last_price": 5.197,
       "open": 5.193,
-      "high": 5.198,
+      "high": 5.199,
       "low": 5.145,
-      "close": 5.1615,
-      "volume": 3667410,
+      "close": 5.197,
+      "volume": 4724336,
       "last_date": "2026-08-07"
     },
     "BP.L": {
-      "last_price": 5.1919,
+      "last_price": 5.198,
       "open": 5.242,
       "high": 5.268,
-      "low": 5.187,
-      "close": 5.1919,
-      "volume": 3213500,
+      "low": 5.183,
+      "close": 5.198,
+      "volume": 3858399,
       "last_date": "2026-08-07"
     },
     "CL=F": {
-      "last_price": 77.54,
+      "last_price": 77.25,
       "open": 78.17,
       "high": 78.77,
-      "low": 77.46,
-      "close": 77.54,
-      "volume": 32039,
+      "low": 77.09,
+      "close": 77.25,
+      "volume": 37812,
       "last_date": "2026-08-07"
     },
     "COIN": {
@@ -85,12 +85,12 @@
       "last_date": "2026-08-06"
     },
     "DGE.L": {
-      "last_price": 17.7545,
+      "last_price": 17.8,
       "open": 17.195,
-      "high": 17.775,
+      "high": 17.835,
       "low": 17.175,
-      "close": 17.7545,
-      "volume": 1006103,
+      "close": 17.8,
+      "volume": 1415886,
       "last_date": "2026-08-07"
     },
     "EQQQ.L": {
@@ -98,26 +98,26 @@
       "open": 535.13,
       "high": 537.43,
       "low": 534.7395,
-      "close": 536.61,
-      "volume": 6940,
+      "close": 536.79,
+      "volume": 5266,
       "last_date": "2026-08-07"
     },
     "GC=F": {
-      "last_price": 4365.8999,
+      "last_price": 4376.0,
       "open": 4298.2998,
-      "high": 4375.8999,
+      "high": 4380.1001,
       "low": 4288.0,
-      "close": 4365.8999,
-      "volume": 49926,
+      "close": 4376.0,
+      "volume": 57281,
       "last_date": "2026-08-07"
     },
     "GLEN.L": {
-      "last_price": 5.608,
+      "last_price": 5.6094,
       "open": 5.656,
       "high": 5.687,
-      "low": 5.591,
-      "close": 5.608,
-      "volume": 3567007,
+      "low": 5.588,
+      "close": 5.6094,
+      "volume": 4114449,
       "last_date": "2026-08-07"
     },
     "GOOGL": {
@@ -130,39 +130,39 @@
       "last_date": "2026-08-06"
     },
     "GSK.L": {
-      "last_price": 19.66,
+      "last_price": 19.65,
       "open": 19.31,
       "high": 19.695,
       "low": 19.31,
-      "close": 19.66,
-      "volume": 829542,
+      "close": 19.65,
+      "volume": 1027750,
       "last_date": "2026-08-07"
     },
     "HSBA.L": {
-      "last_price": 15.219,
+      "last_price": 15.318,
       "open": 15.21,
-      "high": 15.284,
+      "high": 15.344,
       "low": 15.196,
-      "close": 15.219,
-      "volume": 3696673,
+      "close": 15.318,
+      "volume": 4175828,
       "last_date": "2026-08-07"
     },
     "IGLN.L": {
-      "last_price": 83.55,
+      "last_price": 83.75,
       "open": 83.34,
-      "high": 83.705,
+      "high": 83.785,
       "low": 83.08,
-      "close": 83.55,
-      "volume": 98326,
+      "close": 83.75,
+      "volume": 200013,
       "last_date": "2026-08-07"
     },
     "LLOY.L": {
-      "last_price": 1.1485,
+      "last_price": 1.157,
       "open": 1.144,
-      "high": 1.149,
+      "high": 1.1582,
       "low": 1.139,
-      "close": 1.1485,
-      "volume": 13937220,
+      "close": 1.157,
+      "volume": 20586274,
       "last_date": "2026-08-07"
     },
     "META": {
@@ -202,12 +202,12 @@
       "last_date": "2026-08-06"
     },
     "NWG.L": {
-      "last_price": 7.112,
+      "last_price": 7.171,
       "open": 7.06,
-      "high": 7.116,
+      "high": 7.174,
       "low": 7.042,
-      "close": 7.112,
-      "volume": 1660886,
+      "close": 7.171,
+      "volume": 2714317,
       "last_date": "2026-08-07"
     },
     "PLTR": {
@@ -229,21 +229,21 @@
       "last_date": "2026-08-06"
     },
     "RIO.L": {
-      "last_price": 74.68,
+      "last_price": 74.6666,
       "open": 74.73,
       "high": 75.15,
       "low": 74.39,
-      "close": 74.68,
-      "volume": 160498,
+      "close": 74.6666,
+      "volume": 296733,
       "last_date": "2026-08-07"
     },
     "SHEL.L": {
-      "last_price": 32.886,
+      "last_price": 32.975,
       "open": 33.165,
       "high": 33.3,
       "low": 32.82,
-      "close": 32.886,
-      "volume": 629099,
+      "close": 32.975,
+      "volume": 960226,
       "last_date": "2026-08-07"
     },
     "SPY": {
@@ -256,12 +256,12 @@
       "last_date": "2026-08-06"
     },
     "TSCO.L": {
-      "last_price": 4.721,
+      "last_price": 4.722,
       "open": 4.749,
       "high": 4.758,
       "low": 4.7,
-      "close": 4.721,
-      "volume": 2154005,
+      "close": 4.722,
+      "volume": 2608353,
       "last_date": "2026-08-07"
     },
     "TSLA": {
@@ -279,34 +279,34 @@
       "high": 47.015,
       "low": 46.595,
       "close": 46.96,
-      "volume": 325096,
+      "volume": 389064,
       "last_date": "2026-08-07"
     },
     "VAGP.L": {
-      "last_price": 22.21,
+      "last_price": 22.215,
       "open": 22.205,
       "high": 22.345,
       "low": 22.165,
-      "close": 22.21,
-      "volume": 3477,
+      "close": 22.215,
+      "volume": 4588,
       "last_date": "2026-08-07"
     },
     "VFEM.L": {
-      "last_price": 61.525,
+      "last_price": 61.74,
       "open": 61.42,
-      "high": 61.705,
+      "high": 61.76,
       "low": 61.2,
-      "close": 61.525,
-      "volume": 1097,
+      "close": 61.74,
+      "volume": 7591,
       "last_date": "2026-08-07"
     },
     "VOD.L": {
-      "last_price": 1.1945,
+      "last_price": 1.1985,
       "open": 1.195,
       "high": 1.202,
       "low": 1.1865,
-      "close": 1.1945,
-      "volume": 10650623,
+      "close": 1.1985,
+      "volume": 12886360,
       "last_date": "2026-08-07"
     },
     "VOO": {
@@ -328,30 +328,30 @@
       "last_date": "2026-08-06"
     },
     "VUKE.L": {
-      "last_price": 47.31,
+      "last_price": 47.475,
       "open": 47.25,
-      "high": 47.385,
+      "high": 47.475,
       "low": 47.245,
-      "close": 47.31,
-      "volume": 55573,
+      "close": 47.475,
+      "volume": 70039,
       "last_date": "2026-08-07"
     },
     "VUSA.L": {
-      "last_price": 108.8825,
+      "last_price": 108.9025,
       "open": 108.6875,
-      "high": 108.9,
+      "high": 108.96,
       "low": 108.665,
-      "close": 108.8825,
-      "volume": 37618,
+      "close": 108.9025,
+      "volume": 65752,
       "last_date": "2026-08-07"
     },
     "VWRP.L": {
-      "last_price": 144.0,
+      "last_price": 144.2,
       "open": 143.76,
-      "high": 144.04,
+      "high": 144.22,
       "low": 143.7,
-      "close": 144.0,
-      "volume": 106717,
+      "close": 144.2,
+      "volume": 161955,
       "last_date": "2026-08-07"
     },
     "^DJI": {
@@ -364,20 +364,20 @@
       "last_date": "2026-08-06"
     },
     "^FCHI": {
-      "last_price": 8716.7402,
+      "last_price": 8726.5498,
       "open": 8712.29,
       "high": 8731.6299,
       "low": 8697.1904,
-      "close": 8716.7402,
+      "close": 8726.5498,
       "volume": 0,
       "last_date": "2026-08-07"
     },
     "^FTSE": {
-      "last_price": 10889.6299,
+      "last_price": 10921.1299,
       "open": 10867.9102,
-      "high": 10899.3604,
+      "high": 10921.1699,
       "low": 10855.1699,
-      "close": 10889.6602,
+      "close": 10921.1299,
       "volume": 0,
       "last_date": "2026-08-07"
     },
