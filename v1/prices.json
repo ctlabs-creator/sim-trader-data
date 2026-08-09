@@ -1,17 +1,8 @@
 {
   "schema_version": 1,
-  "fetched_at": "2026-08-09T07:43:27Z",
-  "status": "healthy",
+  "fetched_at": "2026-08-09T08:23:18Z",
+  "status": "degraded",
   "prices": {
-    "AAL.L": {
-      "last_price": 40.22,
-      "open": 40.07,
-      "high": 40.64,
-      "low": 39.49,
-      "close": 40.22,
-      "volume": 3306015,
-      "last_date": "2026-08-07"
-    },
     "AAPL": {
       "last_price": 313.33,
       "open": 311.45,
@@ -72,7 +63,7 @@
       "high": 78.77,
       "low": 76.53,
       "close": 78.18,
-      "volume": 246260,
+      "volume": 206437,
       "last_date": "2026-08-07"
     },
     "COIN": {
@@ -103,12 +94,12 @@
       "last_date": "2026-08-07"
     },
     "GC=F": {
-      "last_price": 4399.7,
-      "open": 4277.0,
-      "high": 4371.5,
-      "low": 4274.0,
-      "close": 4340.7002,
-      "volume": 3101,
+      "last_price": 4399.7002,
+      "open": 4298.2998,
+      "high": 4432.2998,
+      "low": 4288.0,
+      "close": 4399.7002,
+      "volume": 182381,
       "last_date": "2026-08-07"
     },
     "GLEN.L": {
@@ -409,5 +400,7 @@
       "last_date": "2026-08-07"
     }
   },
-  "errors": {}
+  "errors": {
+    "AAL.L": "Too Many Requests. Rate limited. Try after a while."
+  }
 }
