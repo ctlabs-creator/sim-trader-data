@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "fetched_at": "2026-08-14T21:40:47Z",
+  "fetched_at": "2026-08-14T21:56:45Z",
   "status": "healthy",
   "prices": {
     "AAL.L": {
@@ -18,7 +18,7 @@
       "high": 307.49,
       "low": 304.3,
       "close": 305.93,
-      "volume": 26054077,
+      "volume": 26072932,
       "last_date": "2026-08-14"
     },
     "AMD": {
@@ -27,7 +27,7 @@
       "high": 514.67,
       "low": 483.2,
       "close": 514.39,
-      "volume": 24905175,
+      "volume": 24928819,
       "last_date": "2026-08-14"
     },
     "AMZN": {
@@ -43,7 +43,7 @@
       "last_price": 114.6,
       "open": 116.1,
       "high": 116.58,
-      "low": 114.06,
+      "low": 114.04,
       "close": 114.6,
       "volume": 3963823,
       "last_date": "2026-08-14"
@@ -69,7 +69,7 @@
     "CL=F": {
       "last_price": 82.4,
       "open": 81.27,
-      "high": 82.98,
+      "high": 82.99,
       "low": 80.71,
       "close": 82.4,
       "volume": 164535,
@@ -81,7 +81,7 @@
       "high": 152.58,
       "low": 147.86,
       "close": 148.47,
-      "volume": 7092625,
+      "volume": 7098837,
       "last_date": "2026-08-14"
     },
     "DGE.L": {
@@ -171,7 +171,7 @@
       "high": 601.86,
       "low": 589.29,
       "close": 589.85,
-      "volume": 8401479,
+      "volume": 8412405,
       "last_date": "2026-08-14"
     },
     "MSFT": {
@@ -207,7 +207,7 @@
       "high": 7.102,
       "low": 7.012,
       "close": 7.078,
-      "volume": 13446033,
+      "volume": 18287570,
       "last_date": "2026-08-14"
     },
     "PLTR": {
