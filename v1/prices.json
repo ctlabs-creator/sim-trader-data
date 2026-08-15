@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "fetched_at": "2026-08-15T07:48:59Z",
+  "fetched_at": "2026-08-15T08:13:40Z",
   "status": "healthy",
   "prices": {
     "AAL.L": {
@@ -43,7 +43,7 @@
       "last_price": 114.6,
       "open": 116.1,
       "high": 116.58,
-      "low": 114.04,
+      "low": 114.06,
       "close": null,
       "volume": 3963823,
       "last_date": "2026-08-14"
@@ -207,7 +207,7 @@
       "high": 7.102,
       "low": 7.012,
       "close": null,
-      "volume": 18287570,
+      "volume": 13446033,
       "last_date": "2026-08-14"
     },
     "PLTR": {
