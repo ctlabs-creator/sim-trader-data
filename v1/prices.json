@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "fetched_at": "2026-08-18T21:43:48Z",
+  "fetched_at": "2026-08-18T21:57:24Z",
   "status": "healthy",
   "prices": {
     "AAL.L": {
@@ -18,7 +18,7 @@
       "high": 311.49,
       "low": 305.74,
       "close": 310.03,
-      "volume": 46601840,
+      "volume": 46451172,
       "last_date": "2026-08-18"
     },
     "AMD": {
