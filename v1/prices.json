@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "fetched_at": "2026-08-18T21:17:25Z",
+  "fetched_at": "2026-08-18T21:43:48Z",
   "status": "healthy",
   "prices": {
     "AAL.L": {
@@ -405,7 +405,7 @@
       "high": 29677.2871,
       "low": 29425.084,
       "close": 29490.957,
-      "volume": 1259810000,
+      "volume": 1267735000,
       "last_date": "2026-08-18"
     }
   },
