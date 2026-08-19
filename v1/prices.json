@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "fetched_at": "2026-08-19T21:36:53Z",
+  "fetched_at": "2026-08-19T21:58:05Z",
   "status": "healthy",
   "prices": {
     "AAL.L": {
@@ -81,7 +81,7 @@
       "high": 165.74,
       "low": 147.5,
       "close": 160.2,
-      "volume": 15078655,
+      "volume": 15079066,
       "last_date": "2026-08-19"
     },
     "DGE.L": {
@@ -216,7 +216,7 @@
       "high": 176.82,
       "low": 169.7705,
       "close": 175.19,
-      "volume": 35885885,
+      "volume": 35885884,
       "last_date": "2026-08-19"
     },
     "QQQ": {
