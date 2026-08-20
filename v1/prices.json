@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "fetched_at": "2026-08-20T21:39:24Z",
+  "fetched_at": "2026-08-20T21:58:44Z",
   "status": "healthy",
   "prices": {
     "AAL.L": {
@@ -252,7 +252,7 @@
       "high": 768.15,
       "low": 762.05,
       "close": 762.6,
-      "volume": 40125558,
+      "volume": 45427032,
       "last_date": "2026-08-20"
     },
     "TSCO.L": {
@@ -315,7 +315,7 @@
       "high": 706.08,
       "low": 700.48,
       "close": 701.01,
-      "volume": 8423433,
+      "volume": 8434949,
       "last_date": "2026-08-20"
     },
     "VTI": {
@@ -324,7 +324,7 @@
       "high": 379.37,
       "low": 376.385,
       "close": 376.58,
-      "volume": 3385590,
+      "volume": 3423552,
       "last_date": "2026-08-20"
     },
     "VUKE.L": {
