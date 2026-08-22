@@ -1,17 +1,8 @@
 {
   "schema_version": 1,
-  "fetched_at": "2026-08-22T16:10:22Z",
-  "status": "healthy",
+  "fetched_at": "2026-08-22T16:37:32Z",
+  "status": "degraded",
   "prices": {
-    "AAL.L": {
-      "last_price": 40.67,
-      "open": 40.37,
-      "high": 41.4,
-      "low": 40.15,
-      "close": null,
-      "volume": 4220347,
-      "last_date": "2026-08-21"
-    },
     "AAPL": {
       "last_price": 309.35,
       "open": 312.05,
@@ -409,5 +400,7 @@
       "last_date": "2026-08-21"
     }
   },
-  "errors": {}
+  "errors": {
+    "AAL.L": "Too Many Requests. Rate limited. Try after a while."
+  }
 }
