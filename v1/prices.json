@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "fetched_at": "2026-08-22T21:35:20Z",
+  "fetched_at": "2026-08-22T21:55:18Z",
   "status": "healthy",
   "prices": {
     "AAL.L": {
@@ -8,8 +8,8 @@
       "open": 40.37,
       "high": 41.4,
       "low": 40.15,
-      "close": null,
-      "volume": 4220347,
+      "close": 40.67,
+      "volume": 4226342,
       "last_date": "2026-08-21"
     },
     "AAPL": {
@@ -44,8 +44,8 @@
       "open": 119.26,
       "high": 122.42,
       "low": 119.26,
-      "close": null,
-      "volume": 2181123,
+      "close": 122.4,
+      "volume": 2344334,
       "last_date": "2026-08-21"
     },
     "BARC.L": {
@@ -53,8 +53,8 @@
       "open": 4.89,
       "high": 4.9574,
       "low": 4.8485,
-      "close": null,
-      "volume": 26641849,
+      "close": 4.926,
+      "volume": 26642487,
       "last_date": "2026-08-21"
     },
     "BP.L": {
@@ -62,8 +62,8 @@
       "open": 5.508,
       "high": 5.557,
       "low": 5.461,
-      "close": null,
-      "volume": 53631242,
+      "close": 5.495,
+      "volume": 54092424,
       "last_date": "2026-08-21"
     },
     "CL=F": {
@@ -89,8 +89,8 @@
       "open": 17.22,
       "high": 17.3,
       "low": 17.04,
-      "close": null,
-      "volume": 4806532,
+      "close": 17.19,
+      "volume": 4806727,
       "last_date": "2026-08-21"
     },
     "EQQQ.L": {
@@ -98,7 +98,7 @@
       "open": 525.0,
       "high": 527.87,
       "low": 522.48,
-      "close": null,
+      "close": 525.8,
       "volume": 16692,
       "last_date": "2026-08-21"
     },
@@ -116,8 +116,8 @@
       "open": 5.914,
       "high": 6.014,
       "low": 5.913,
-      "close": null,
-      "volume": 29291216,
+      "close": 5.968,
+      "volume": 29367135,
       "last_date": "2026-08-21"
     },
     "GOOGL": {
@@ -134,8 +134,8 @@
       "open": 18.99,
       "high": 19.19,
       "low": 18.755,
-      "close": null,
-      "volume": 4818368,
+      "close": 19.185,
+      "volume": 4820017,
       "last_date": "2026-08-21"
     },
     "HSBA.L": {
@@ -143,17 +143,17 @@
       "open": 15.162,
       "high": 15.274,
       "low": 15.058,
-      "close": null,
-      "volume": 18062997,
+      "close": 15.184,
+      "volume": 18769794,
       "last_date": "2026-08-21"
     },
     "IGLN.L": {
-      "last_price": 89.372,
+      "last_price": 89.3725,
       "open": 88.47,
       "high": 89.3725,
       "low": 88.4225,
-      "close": null,
-      "volume": 542794,
+      "close": 89.3725,
+      "volume": 543696,
       "last_date": "2026-08-21"
     },
     "LLOY.L": {
@@ -161,8 +161,8 @@
       "open": 1.0985,
       "high": 1.1164,
       "low": 1.095,
-      "close": null,
-      "volume": 92666250,
+      "close": 1.1125,
+      "volume": 92666524,
       "last_date": "2026-08-21"
     },
     "META": {
@@ -206,8 +206,8 @@
       "open": 6.77,
       "high": 6.8627,
       "low": 6.7472,
-      "close": null,
-      "volume": 15378899,
+      "close": 6.838,
+      "volume": 15453192,
       "last_date": "2026-08-21"
     },
     "PLTR": {
@@ -233,8 +233,8 @@
       "open": 75.52,
       "high": 76.8039,
       "low": 75.065,
-      "close": null,
-      "volume": 1604732,
+      "close": 76.48,
+      "volume": 1665279,
       "last_date": "2026-08-21"
     },
     "SHEL.L": {
@@ -242,8 +242,8 @@
       "open": 34.245,
       "high": 34.495,
       "low": 34.05,
-      "close": null,
-      "volume": 7439085,
+      "close": 34.095,
+      "volume": 12439271,
       "last_date": "2026-08-21"
     },
     "SPY": {
@@ -260,8 +260,8 @@
       "open": 4.5,
       "high": 4.572,
       "low": 4.476,
-      "close": null,
-      "volume": 17529496,
+      "close": 4.572,
+      "volume": 17529632,
       "last_date": "2026-08-21"
     },
     "TSLA": {
@@ -278,17 +278,17 @@
       "open": 46.49,
       "high": 46.865,
       "low": 45.99,
-      "close": null,
-      "volume": 3116099,
+      "close": 46.81,
+      "volume": 3153200,
       "last_date": "2026-08-21"
     },
     "VAGP.L": {
-      "last_price": 22.073,
+      "last_price": 22.0725,
       "open": 22.08,
       "high": 22.13,
       "low": 22.065,
-      "close": null,
-      "volume": 16731,
+      "close": 22.0725,
+      "volume": 16747,
       "last_date": "2026-08-21"
     },
     "VFEM.L": {
@@ -296,8 +296,8 @@
       "open": 60.985,
       "high": 61.435,
       "low": 60.875,
-      "close": null,
-      "volume": 31842,
+      "close": 61.16,
+      "volume": 31841,
       "last_date": "2026-08-21"
     },
     "VOD.L": {
@@ -305,8 +305,8 @@
       "open": 1.184,
       "high": 1.185,
       "low": 1.1673,
-      "close": null,
-      "volume": 82234595,
+      "close": 1.1715,
+      "volume": 82235177,
       "last_date": "2026-08-21"
     },
     "VOO": {
@@ -332,17 +332,17 @@
       "open": 46.865,
       "high": 47.235,
       "low": 46.8,
-      "close": null,
-      "volume": 163880,
+      "close": 47.14,
+      "volume": 165530,
       "last_date": "2026-08-21"
     },
     "VUSA.L": {
-      "last_price": 106.853,
+      "last_price": 106.8525,
       "open": 106.37,
       "high": 106.9725,
       "low": 106.3175,
-      "close": null,
-      "volume": 142148,
+      "close": 106.8525,
+      "volume": 142193,
       "last_date": "2026-08-21"
     },
     "VWRP.L": {
@@ -350,8 +350,8 @@
       "open": 141.84,
       "high": 142.46,
       "low": 141.78,
-      "close": null,
-      "volume": 466290,
+      "close": 142.36,
+      "volume": 466289,
       "last_date": "2026-08-21"
     },
     "^DJI": {
