@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "fetched_at": "2026-08-29T12:51:47Z",
+  "fetched_at": "2026-08-29T16:54:47Z",
   "status": "healthy",
   "prices": {
     "AAL.L": {
@@ -355,7 +355,7 @@
       "last_date": "2026-08-28"
     },
     "^DJI": {
-      "last_price": 53560.0,
+      "last_price": 53559.99,
       "open": 53611.9414,
       "high": 53819.6484,
       "low": 53489.4102,
