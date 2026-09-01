@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "fetched_at": "2026-08-31T23:56:50Z",
+  "fetched_at": "2026-09-01T01:22:06Z",
   "status": "healthy",
   "prices": {
     "AAL.L": {
@@ -16,7 +16,7 @@
       "last_price": 316.85,
       "open": 319.56,
       "high": 321.235,
-      "low": 312.85,
+      "low": 312.8,
       "close": 316.85,
       "volume": 40667429,
       "last_date": "2026-08-31"
@@ -67,12 +67,12 @@
       "last_date": "2026-08-28"
     },
     "CL=F": {
-      "last_price": 86.45,
+      "last_price": 86.5,
       "open": 86.31,
-      "high": 86.49,
+      "high": 86.72,
       "low": 86.13,
-      "close": 86.45,
-      "volume": 1938,
+      "close": 86.5,
+      "volume": 6378,
       "last_date": "2026-08-31"
     },
     "COIN": {
@@ -103,12 +103,12 @@
       "last_date": "2026-08-28"
     },
     "GC=F": {
-      "last_price": 4497.0,
+      "last_price": 4497.2002,
       "open": 4498.7002,
-      "high": 4504.7998,
+      "high": 4510.5,
       "low": 4490.2998,
-      "close": 4497.0,
-      "volume": 2837,
+      "close": 4497.2002,
+      "volume": 7688,
       "last_date": "2026-08-31"
     },
     "GLEN.L": {
@@ -195,7 +195,7 @@
     "NVDA": {
       "last_price": 220.78,
       "open": 218.862,
-      "high": 221.29,
+      "high": 221.3,
       "low": 216.21,
       "close": 220.78,
       "volume": 124033835,
@@ -365,12 +365,12 @@
     },
     "^FCHI": {
       "last_price": 8334.5,
-      "open": 8404.7305,
-      "high": 8427.0996,
-      "low": 8334.5,
-      "close": null,
-      "volume": 0,
-      "last_date": "2026-08-31"
+      "open": 8388.7695,
+      "high": 8421.5195,
+      "low": 8388.7695,
+      "close": 8401.1797,
+      "volume": 55003100,
+      "last_date": "2026-08-28"
     },
     "^FTSE": {
       "last_price": 10824.2998,
@@ -391,13 +391,13 @@
       "last_date": "2026-08-31"
     },
     "^N225": {
-      "last_price": 66311.93,
-      "open": 65668.5078,
-      "high": 66311.9297,
-      "low": 64832.1016,
-      "close": null,
+      "last_price": 66167.3594,
+      "open": 65885.4688,
+      "high": 66173.0703,
+      "low": 65576.6094,
+      "close": 66167.3594,
       "volume": 0,
-      "last_date": "2026-08-31"
+      "last_date": "2026-09-01"
     },
     "^NDX": {
       "last_price": 29456.9727,
