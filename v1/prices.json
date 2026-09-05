@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "fetched_at": "2026-09-05T20:31:51Z",
+  "fetched_at": "2026-09-05T22:15:47Z",
   "status": "healthy",
   "prices": {
     "AAL.L": {
@@ -98,8 +98,8 @@
       "open": 533.67,
       "high": 540.0,
       "low": 532.51,
-      "close": null,
-      "volume": 11278,
+      "close": 532.79,
+      "volume": 13656,
       "last_date": "2026-09-04"
     },
     "GC=F": {
@@ -152,7 +152,7 @@
       "open": 86.565,
       "high": 87.1,
       "low": 84.6925,
-      "close": null,
+      "close": 86.12,
       "volume": 662139,
       "last_date": "2026-09-04"
     },
@@ -287,8 +287,8 @@
       "open": 22.07,
       "high": 22.1,
       "low": 21.99,
-      "close": null,
-      "volume": 14519,
+      "close": 22.03,
+      "volume": 14536,
       "last_date": "2026-09-04"
     },
     "VFEM.L": {
@@ -296,8 +296,8 @@
       "open": 62.065,
       "high": 62.74,
       "low": 62.005,
-      "close": null,
-      "volume": 17831,
+      "close": 62.59,
+      "volume": 23676,
       "last_date": "2026-09-04"
     },
     "VOD.L": {
@@ -332,8 +332,8 @@
       "open": 47.2,
       "high": 47.33,
       "low": 47.0945,
-      "close": null,
-      "volume": 535482,
+      "close": 47.255,
+      "volume": 536178,
       "last_date": "2026-09-04"
     },
     "VUSA.L": {
@@ -341,8 +341,8 @@
       "open": 108.5625,
       "high": 108.96,
       "low": 108.1115,
-      "close": null,
-      "volume": 193418,
+      "close": 108.135,
+      "volume": 249106,
       "last_date": "2026-09-04"
     },
     "VWRP.L": {
@@ -350,8 +350,8 @@
       "open": 144.3,
       "high": 144.88,
       "low": 144.1989,
-      "close": null,
-      "volume": 360584,
+      "close": 144.26,
+      "volume": 366432,
       "last_date": "2026-09-04"
     },
     "^DJI": {
