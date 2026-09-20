@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "fetched_at": "2026-09-20T20:45:49Z",
+  "fetched_at": "2026-09-20T22:46:23Z",
   "status": "healthy",
   "prices": {
     "AAL.L": {
@@ -67,13 +67,13 @@
       "last_date": "2026-09-18"
     },
     "CL=F": {
-      "last_price": 96.08,
-      "open": 96.48,
-      "high": 98.01,
-      "low": 94.83,
-      "close": 96.08,
-      "volume": 300567,
-      "last_date": "2026-09-18"
+      "last_price": 96.44,
+      "open": 96.75,
+      "high": 97.22,
+      "low": 96.38,
+      "close": 96.44,
+      "volume": 6549,
+      "last_date": "2026-09-20"
     },
     "COIN": {
       "last_price": 194.25,
@@ -103,13 +103,13 @@
       "last_date": "2026-09-18"
     },
     "GC=F": {
-      "last_price": 4424.8999,
-      "open": 4381.6001,
-      "high": 4439.7998,
-      "low": 4372.2002,
-      "close": 4424.8999,
-      "volume": 138899,
-      "last_date": "2026-09-18"
+      "last_price": 4414.3999,
+      "open": 4413.0,
+      "high": 4420.2002,
+      "low": 4411.0,
+      "close": 4414.3999,
+      "volume": 1796,
+      "last_date": "2026-09-20"
     },
     "GLEN.L": {
       "last_price": 5.568,
